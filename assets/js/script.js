@@ -4,11 +4,8 @@ let email =document.getElementById("email");
 let password =document.getElementById("password");
 let loginEmailOrUsername =document.getElementById("register_email_username");
 let loginPassword =document.getElementById("register_password");
-let toDoListDiv =document.getElementsByClassName("main1")[0];
-let task =document.getElementById("task");
 
 let dataArray =JSON.parse(localStorage.getItem("users") )|| [];
-let taskArray=[]
 
 function checkValidations(event){
     event.preventDefault();
@@ -136,8 +133,7 @@ function checkValidations(event){
                     name:fullname.value.trim(),
                     username:username.value.trim(),
                     email:email.value.trim(),
-                    password:password.value.trim(),
-                    task: taskArray
+                    password:password.value.trim()
                 }
                 dataArray.push(person1);
                 
